@@ -1,0 +1,1 @@
+package com.jjlglass.apptours.models.entities;
