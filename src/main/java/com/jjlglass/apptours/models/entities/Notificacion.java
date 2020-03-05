@@ -1,7 +1,7 @@
 package com.jjlglass.apptours.models.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,10 +31,11 @@ public class Notificacion implements Serializable {
 	@Column(name="Descripcion_Notificacion")
 	@NotEmpty
 	private String descripcion_Notificacion;
-
+	
+	@Column(name="Fecha")
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date Fecha;
+	private Calendar Fecha;
 
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="sitio_turistico_id", nullable=false)
