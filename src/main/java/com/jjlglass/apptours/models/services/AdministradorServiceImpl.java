@@ -17,25 +17,22 @@ public class AdministradorServiceImpl implements AdministradorService {
 
 	@Override
 	public List<Administrador> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Administrador>) repository.findAll();
 	}
 
 	@Override
 	public Administrador save(Administrador entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<Administrador> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository .findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);	
 		
 	}
 	
