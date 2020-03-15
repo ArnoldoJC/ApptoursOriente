@@ -16,25 +16,22 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 	@Override
 	public List<Categoria> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Categoria>) repository.findAll();
 	}
 
 	@Override
 	public Categoria save(Categoria entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<Categoria> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);
 		
 	}
 	

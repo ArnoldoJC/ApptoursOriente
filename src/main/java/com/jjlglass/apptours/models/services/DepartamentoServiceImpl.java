@@ -17,25 +17,23 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 
 	@Override
 	public List<Departamento> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Departamento>) repository.findAll(); 
+		
 	}
 
 	@Override
 	public Departamento save(Departamento entity) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		return repository.save(entity); 
+	} 
 
 	@Override
 	public Optional<Departamento> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);
 		
 	}
 	
