@@ -17,25 +17,22 @@ public class GaleriaServiceImpl implements GaleriaService {
 
 	@Override
 	public List<Galeria> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Galeria>) repository.findAll();
 	}
 
 	@Override
 	public Galeria save(Galeria entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<Galeria> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository .findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);	
 		
 	}
 }	

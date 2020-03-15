@@ -17,25 +17,22 @@ public class NotificacionServiceImpl implements NotificacionService {
 
 	@Override
 	public List<Notificacion> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Notificacion>) repository.findAll();
 	}
 
 	@Override
 	public Notificacion save(Notificacion entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<Notificacion> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository .findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);
 		
 	}
 	

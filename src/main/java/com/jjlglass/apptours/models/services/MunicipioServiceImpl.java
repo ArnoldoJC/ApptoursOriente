@@ -17,25 +17,23 @@ public class MunicipioServiceImpl implements MunicipioService {
 
 	@Override
 	public List<Municipio> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Municipio>) repository.findAll() ;
 	}
 
 	@Override
 	public Municipio save(Municipio entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<Municipio> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repository .findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);
 		
 	}
 	
