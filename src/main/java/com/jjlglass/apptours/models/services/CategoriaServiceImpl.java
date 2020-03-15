@@ -26,12 +26,20 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 	@Override
 	public Optional<Categoria> findById(Long id) {
+<<<<<<< HEAD
 		return repository .findById(id);
+=======
+		return repository.findById(id);
+>>>>>>> df359c8cc59ac6b0f217031f64393c9a2d8f480b
 	}
 
 	@Override
 	public void delete(Long id) {
+<<<<<<< HEAD
 		repository.deleteById(id);	
+=======
+		repository.deleteById(id);
+>>>>>>> df359c8cc59ac6b0f217031f64393c9a2d8f480b
 		
 	}
 	
