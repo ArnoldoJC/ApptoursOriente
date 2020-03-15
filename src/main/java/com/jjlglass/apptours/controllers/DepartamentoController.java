@@ -20,7 +20,7 @@ public class DepartamentoController {
 	 @Autowired
 	    private DepartamentoService departamentoService;
 
-	    @RequestMapping(value="departamento", method = RequestMethod.GET)
+	    @RequestMapping(value="/departamento", method = RequestMethod.GET)
 	    public List<Departamento>getList(){
 	        List<Departamento>nombreObjeto = departamentoService.findAll();
 	        return nombreObjeto;
