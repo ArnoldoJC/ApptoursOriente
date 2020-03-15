@@ -14,7 +14,7 @@ import com.jjlglass.apptours.models.entities.Categoria;
 import com.jjlglass.apptours.models.services.CategoriaService;
 
 @RestController
-@RequestMapping("apptours/categoria")
+@RequestMapping("/apptours/categoria")
 public class CategoriaController {
 	
     @Autowired

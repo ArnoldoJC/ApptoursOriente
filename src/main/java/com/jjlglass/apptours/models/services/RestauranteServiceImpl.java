@@ -17,25 +17,22 @@ public class RestauranteServiceImpl implements RestauranteService {
 
 	@Override
 	public List<Restaurante> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Restaurante>) repository.findAll();
 	}
 
 	@Override
 	public Restaurante save(Restaurante entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<Restaurante> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository .findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);
 		
 	}
 	

@@ -13,7 +13,7 @@ import com.jjlglass.apptours.models.entities.Notificacion;
 import com.jjlglass.apptours.models.services.NotificacionService;
 
 @RestController
-@RequestMapping("apptours/notificacion")
+@RequestMapping("/apptours/notificacion")
 public class NotificacionController {
 
     @Autowired

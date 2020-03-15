@@ -14,7 +14,7 @@ import com.jjlglass.apptours.models.entities.Administrador;
 import com.jjlglass.apptours.models.services.AdministradorService;
 
 @RestController
-@RequestMapping("apptours/administrador")
+@RequestMapping("/apptours/administrador")
 public class AdministradorController {
 	
 	@Autowired

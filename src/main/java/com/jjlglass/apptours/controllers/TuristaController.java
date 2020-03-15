@@ -15,7 +15,7 @@ import com.jjlglass.apptours.models.entities.Turista;
 import com.jjlglass.apptours.models.services.TuristaService;
 
 @RestController
-@RequestMapping("apptours/turista")
+@RequestMapping("/apptours/turista")
 public class TuristaController {
 
 

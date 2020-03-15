@@ -14,7 +14,7 @@ import com.jjlglass.apptours.models.entities.Restaurante;
 import com.jjlglass.apptours.models.services.RestauranteService;
 
 @RestController
-@RequestMapping("apptours/restaurante")
+@RequestMapping("/apptours/restaurante")
 public class RestauranteController {
 
     @Autowired

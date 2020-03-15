@@ -13,7 +13,7 @@ import com.jjlglass.apptours.models.entities.Galeria;
 import com.jjlglass.apptours.models.services.GaleriaService;
 
 @RestController
-@RequestMapping("apptours/galeria")
+@RequestMapping("/apptours/galeria")
 public class GaleriaController {
 
     @Autowired

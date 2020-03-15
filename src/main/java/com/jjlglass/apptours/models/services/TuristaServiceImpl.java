@@ -17,25 +17,22 @@ public class TuristaServiceImpl implements TuristaService {
 
 	@Override
 	public List<Turista> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Turista>) repository.findAll();
 	}
 
 	@Override
 	public Turista save(Turista entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<Turista> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository .findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);
 		
 	}
 	

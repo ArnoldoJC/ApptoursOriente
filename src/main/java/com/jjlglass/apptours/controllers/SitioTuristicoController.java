@@ -14,7 +14,7 @@ import com.jjlglass.apptours.models.entities.SitioTuristico;
 import com.jjlglass.apptours.models.services.SitioTuristicoService;
 
 @RestController
-@RequestMapping("apptours/sitioTuristico")
+@RequestMapping("/apptours/sitioTuristico")
 public class SitioTuristicoController {
 
 

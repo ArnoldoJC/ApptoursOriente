@@ -14,7 +14,7 @@ import com.jjlglass.apptours.models.entities.Departamento;
 import com.jjlglass.apptours.models.services.DepartamentoService;
 
 @RestController
-@RequestMapping("apptours/departamento")
+@RequestMapping("/apptours/departamento")
 public class DepartamentoController {
 
 	 @Autowired

@@ -17,25 +17,22 @@ public class SitioTuristicoServiceImpl implements SitioTuristicoService {
 
 	@Override
 	public List<SitioTuristico> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<SitioTuristico>) repository.findAll();
 	}
 
 	@Override
 	public SitioTuristico save(SitioTuristico entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override
 	public Optional<SitioTuristico> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository .findById(id);
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(id);
 		
 	}
 	

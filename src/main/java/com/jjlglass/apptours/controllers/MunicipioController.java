@@ -13,7 +13,7 @@ import com.jjlglass.apptours.models.entities.Municipio;
 import com.jjlglass.apptours.models.services.MunicipioService;
 
 @RestController
-@RequestMapping("apptours/municipio")
+@RequestMapping("/apptours/municipio")
 public class MunicipioController {
 
     @Autowired
