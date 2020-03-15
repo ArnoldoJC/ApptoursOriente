@@ -19,22 +19,22 @@ public class MunicipioController {
     @Autowired
     private MunicipioService municipioService;
 
-    @RequestMapping(value="/municipio", method = RequestMethod.GET)
+    @RequestMapping(value="", method = RequestMethod.GET)
     public List<Municipio>getList(){
         List<Municipio>nombreObjeto = municipioService.findAll();
         return nombreObjeto;
     }
-    @RequestMapping(value="/municipio/{id}", method = RequestMethod.GET)
+    @RequestMapping(value="/{id}", method = RequestMethod.GET)
     public Municipio obtenerPorId(@PathVariable("id") Long id) {
     Optional<Municipio> nombreObjeto = municipioService.findById(id);
     return nombreObjeto.get();
     }
-    @RequestMapping(value="/municipio", method = RequestMethod.POST)
+    @RequestMapping(value="", method = RequestMethod.POST)
     public Municipio guardar(@RequestBody Municipio municipio){
     Municipio cd = municipioService.save(municipio);
     return cd;
     }
-    @RequestMapping(value="/municipio/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
     public void deleteById(@PathVariable("id") Long id){
     municipioService.delete(id);
     }

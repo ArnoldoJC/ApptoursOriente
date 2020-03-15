@@ -20,25 +20,25 @@ public class DepartamentoController {
 	 @Autowired
 	    private DepartamentoService departamentoService;
 
-	    @RequestMapping(value="/departamento", method = RequestMethod.GET)
+	    @RequestMapping(value="", method = RequestMethod.GET)
 	    public List<Departamento>getList(){
 	        List<Departamento>nombreObjeto = departamentoService.findAll();
 	        return nombreObjeto;
 	    }
 
-	    @RequestMapping(value="/departamento/{id}", method = RequestMethod.GET)
+	    @RequestMapping(value="/{id}", method = RequestMethod.GET)
 	    public Departamento obtenerPorId(@PathVariable("id") Long id) {
 	    Optional<Departamento> nombreObjeto = departamentoService.findById(id);
 	    return nombreObjeto.get();
 	    }
 
-	    @RequestMapping(value="/departamento", method = RequestMethod.POST)
+	    @RequestMapping(value="", method = RequestMethod.POST)
 	    public Departamento guardar(@RequestBody Departamento departamento){
 	    Departamento cd = departamentoService.save(departamento);
 	    return cd;
 	    }
 
-	    @RequestMapping(value="/departamento/{id}", method = RequestMethod.DELETE)
+	    @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
 	    public void deleteById(@PathVariable("id") Long id){
 	    departamentoService.delete(id);
 	    }

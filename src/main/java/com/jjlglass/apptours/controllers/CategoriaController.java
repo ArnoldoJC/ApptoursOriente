@@ -20,25 +20,25 @@ public class CategoriaController {
     @Autowired
     private CategoriaService categoriaService;
 
-    @RequestMapping(value="/categoria", method = RequestMethod.GET)
+    @RequestMapping(value="", method = RequestMethod.GET)
     public List<Categoria>getList(){
         List<Categoria>nombreObjeto = categoriaService.findAll();
         return nombreObjeto;
     }
 
-    @RequestMapping(value="/categoria/{id}", method = RequestMethod.GET)
+    @RequestMapping(value="/{id}", method = RequestMethod.GET)
     public Categoria obtenerPorId(@PathVariable("id") Long id) {
     Optional<Categoria> nombreObjeto = categoriaService.findById(id);
     return nombreObjeto.get();
     }
 
-    @RequestMapping(value="/categoria", method = RequestMethod.POST)
+    @RequestMapping(value="", method = RequestMethod.POST)
     public Categoria guardar(@RequestBody Categoria categoria){
     Categoria cd = categoriaService.save(categoria);
     return cd;
     }
 
-    @RequestMapping(value="/categoria/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
     public void deleteById(@PathVariable("id") Long id){
     categoriaService.delete(id);
     }

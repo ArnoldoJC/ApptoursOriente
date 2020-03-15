@@ -20,25 +20,25 @@ public class AdministradorController {
 	@Autowired
 	private AdministradorService administradorService;
 	
-	@RequestMapping(value="/administrador", method = RequestMethod.GET)
+	@RequestMapping(value="", method = RequestMethod.GET)
 	public List<Administrador>getList(){
 		List<Administrador>nombreObjeto = administradorService.findAll();
 		return nombreObjeto;
 	}
 	
-	@RequestMapping(value="/administrador/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	public Administrador obtenerPorId(@PathVariable("id") Long id) {
 	Optional<Administrador> nombreObjeto = administradorService.findById(id);
 	return nombreObjeto.get();
 	}
 	
-	@RequestMapping(value="/administrador", method = RequestMethod.POST)
+	@RequestMapping(value="", method = RequestMethod.POST)
 	public Administrador guardar(@RequestBody Administrador administrador){
 	Administrador cd = administradorService.save(administrador);
 	return cd;
 	}
 	
-	@RequestMapping(value="/administrador/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
 	public void deleteById(@PathVariable("id") Long id){
 	administradorService.delete(id);
 	}

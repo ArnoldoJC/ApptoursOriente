@@ -22,25 +22,25 @@ public class TuristaController {
     @Autowired
     private TuristaService turistaService;
 
-    @RequestMapping(value="/turista", method = RequestMethod.GET)
+    @RequestMapping(value="", method = RequestMethod.GET)
     public List<Turista>getList(){
         List<Turista>nombreObjeto = turistaService.findAll();
         return nombreObjeto;
     }
 
-    @RequestMapping(value="/turista/{id}", method = RequestMethod.GET)
+    @RequestMapping(value="/{id}", method = RequestMethod.GET)
     public Turista obtenerPorId(@PathVariable("id") Long id) {
     Optional<Turista> nombreObjeto = turistaService.findById(id);
     return nombreObjeto.get();
     }
 
-    @RequestMapping(value="/turista", method = RequestMethod.POST)
+    @RequestMapping(value="", method = RequestMethod.POST)
     public Turista guardar(@RequestBody Turista turista){
     Turista cd = turistaService.save(turista);
     return cd;
     }
 
-    @RequestMapping(value="/turista/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
     public void deleteById(@PathVariable("id") Long id){
     turistaService.delete(id);
     }

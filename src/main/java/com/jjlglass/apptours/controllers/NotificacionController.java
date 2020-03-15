@@ -19,22 +19,22 @@ public class NotificacionController {
     @Autowired
     private NotificacionService notificacionService;
 
-    @RequestMapping(value="/notificacion", method = RequestMethod.GET)
+    @RequestMapping(value="", method = RequestMethod.GET)
     public List<Notificacion>getList(){
         List<Notificacion>nombreObjeto = notificacionService.findAll();
         return nombreObjeto;
     }
-    @RequestMapping(value="/notificacion/{id}", method = RequestMethod.GET)
+    @RequestMapping(value="/{id}", method = RequestMethod.GET)
     public Notificacion obtenerPorId(@PathVariable("id") Long id) {
     Optional<Notificacion> nombreObjeto = notificacionService.findById(id);
     return nombreObjeto.get();
     }
-    @RequestMapping(value="/notificacion", method = RequestMethod.POST)
+    @RequestMapping(value="", method = RequestMethod.POST)
     public Notificacion guardar(@RequestBody Notificacion notificacion){
     Notificacion cd = notificacionService.save(notificacion);
     return cd;
     }
-    @RequestMapping(value="/notificacion/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
     public void deleteById(@PathVariable("id") Long id){
     notificacionService.delete(id);
     }

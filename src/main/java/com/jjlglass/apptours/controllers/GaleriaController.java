@@ -19,22 +19,22 @@ public class GaleriaController {
     @Autowired
     private GaleriaService galeriaService;
 
-    @RequestMapping(value="/galeria", method = RequestMethod.GET)
+    @RequestMapping(value="", method = RequestMethod.GET)
     public List<Galeria>getList(){
         List<Galeria>nombreObjeto = galeriaService.findAll();
         return nombreObjeto;
     }
-    @RequestMapping(value="/galeria/{id}", method = RequestMethod.GET)
+    @RequestMapping(value="/{id}", method = RequestMethod.GET)
     public Galeria obtenerPorId(@PathVariable("id") Long id) {
     Optional<Galeria> nombreObjeto = galeriaService.findById(id);
     return nombreObjeto.get();
     }
-    @RequestMapping(value="/galeria", method = RequestMethod.POST)
+    @RequestMapping(value="", method = RequestMethod.POST)
     public Galeria guardar(@RequestBody Galeria galeria){
     Galeria cd = galeriaService.save(galeria);
     return cd;
     }
-    @RequestMapping(value="/galeria/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
     public void deleteById(@PathVariable("id") Long id){
     galeriaService.delete(id);
     }
