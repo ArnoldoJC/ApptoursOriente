@@ -31,4 +31,36 @@ public class Administrador implements Serializable {
 	@Column(name="Password")
 	@NotEmpty
 	private String password;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUsuario_Administrador() {
+		return usuario_Administrador;
+	}
+
+	public void setUsuario_Administrador(String usuario_Administrador) {
+		this.usuario_Administrador = usuario_Administrador;
+	}
+
+	public String getNombre_Administrador() {
+		return nombre_Administrador;
+	}
+
+	public void setNombre_Administrador(String nombre_Administrador) {
+		this.nombre_Administrador = nombre_Administrador;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

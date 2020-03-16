@@ -27,4 +27,28 @@ public class Galeria implements Serializable {
 	@Column(name="Nombre_Imagen")
 	@NotEmpty
 	private String nombre_Imagen;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+	public String getNombre_Imagen() {
+		return nombre_Imagen;
+	}
+
+	public void setNombre_Imagen(String nombre_Imagen) {
+		this.nombre_Imagen = nombre_Imagen;
+	}
 }

@@ -30,4 +30,28 @@ public class Restaurante implements Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="galeria_id", nullable=false)
 	private Galeria galeria;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNombre_Restaurante() {
+		return nombre_Restaurante;
+	}
+
+	public void setNombre_Restaurante(String nombre_Restaurante) {
+		this.nombre_Restaurante = nombre_Restaurante;
+	}
+
+	public Galeria getGaleria() {
+		return galeria;
+	}
+
+	public void setGaleria(Galeria galeria) {
+		this.galeria = galeria;
+	}
 }

@@ -40,4 +40,36 @@ public class Notificacion implements Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="sitio_turistico_id", nullable=false)
 	private SitioTuristico sitio_turistico;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getDescripcion_Notificacion() {
+		return descripcion_Notificacion;
+	}
+
+	public void setDescripcion_Notificacion(String descripcion_Notificacion) {
+		this.descripcion_Notificacion = descripcion_Notificacion;
+	}
+
+	public Calendar getFecha() {
+		return Fecha;
+	}
+
+	public void setFecha(Calendar fecha) {
+		Fecha = fecha;
+	}
+
+	public SitioTuristico getSitio_turistico() {
+		return sitio_turistico;
+	}
+
+	public void setSitio_turistico(SitioTuristico sitio_turistico) {
+		this.sitio_turistico = sitio_turistico;
+	}
 }

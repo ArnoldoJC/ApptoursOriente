@@ -31,4 +31,28 @@ public class Municipio implements Serializable {
 	@JoinColumn(name="departamento_id", nullable=false)
 	private Departamento departamento;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNombre_Municipio() {
+		return nombre_Municipio;
+	}
+
+	public void setNombre_Municipio(String nombre_Municipio) {
+		this.nombre_Municipio = nombre_Municipio;
+	}
+
+	public Departamento getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
+	}
+
 }
